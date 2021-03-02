@@ -1,0 +1,8 @@
+{
+  "name": "css-wonders",
+  "repository": "https://github.com/JamesKoenig/css-wonders",
+  "homepage": "https://css-wonders.herokuapp.com/",
+  "author": "James Koenig <Koenig.James@Live.com>",
+  "license": "BSD 3-Clause License",
+  "private": true
+}
