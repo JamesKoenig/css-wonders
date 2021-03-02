@@ -4,5 +4,9 @@
   "homepage": "https://css-wonders.herokuapp.com/",
   "author": "James Koenig <Koenig.James@Live.com>",
   "license": "BSD 3-Clause License",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "webpack": "^5.24.2",
+    "webpack-cli": "^4.5.0"
+  }
 }
