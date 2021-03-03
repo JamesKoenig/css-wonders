@@ -1,13 +1,6 @@
 class CodeSnippet {
-  constructor(filepath) {
-    this._data = this.readFile(filepath);
-  }
-
-  readFile() {
-    return `
-<div>
-  <p>hello world!</p>
-</div>`;
+  constructor(data) {
+    this._data = data;
   }
 
   renderText() {

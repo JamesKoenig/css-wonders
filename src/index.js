@@ -6,7 +6,17 @@ document.addEventListener('DOMContentLoaded', () => {
   let welcomeHeader = document.createElement("h1")
   welcomeHeader.innerText = "dynamically generated html!";
   body.appendChild(welcomeHeader);
-  let snippet = new CodeSnippet("testPath");
-  body.appendChild(snippet.renderText());
-  body.appendChild(snippet.render());
+  let xhr = new XMLHttpRequest();
+  xhr.open('GET', 'assets/code_snippets/hello_world.html', true);
+  xhr.onload = function () {
+    console.log(this);
+    let snippet = new CodeSnippet(this.response);
+    body.appendChild(snippet.renderText());
+    body.appendChild(snippet.render());
+
+  }
+  xhr.send();
+  //let snippet = new CodeSnippet("testPath");
+  //body.appendChild(snippet.renderText());
+  //body.appendChild(snippet.render());
 });
