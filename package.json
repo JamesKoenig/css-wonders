@@ -16,5 +16,8 @@
     "presets": [
       "@babel/preset-env"
     ]
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.11.2"
   }
 }
