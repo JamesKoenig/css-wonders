@@ -6,7 +6,7 @@ class CodeSnippet {
   }
 
   renderText() {
-    let res = document.createElement('pre');
+    let res = document.createElement('code');
     res.innerText = this._data
     let highlighter = new HtmlHighlighter(res.innerHTML);
 

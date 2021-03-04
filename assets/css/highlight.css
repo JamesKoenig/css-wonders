@@ -1,6 +1,7 @@
 
-pre {
+code.code-raw {
     font-family: monospace;
+    white-space: pre-wrap;
 }
 
 span.wicked {
