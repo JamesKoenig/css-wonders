@@ -1,3 +1,5 @@
+import HtmlHighlighter from './html_highlight';
+
 class CodeSnippet {
   constructor(data) {
     this._data = data;
@@ -5,10 +7,12 @@ class CodeSnippet {
 
   renderText() {
     let res = document.createElement('pre');
-    let escaped = document.createTextNode(this._data);
+    res.innerText = this._data
+    let highlighter = new HtmlHighlighter(res.innerHTML);
+
     res.classList.add('code-raw');
 
-    res.appendChild(escaped);
+    res.innerHTML = highlighter.render();
     return res;
   }
 
