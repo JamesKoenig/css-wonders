@@ -1,0 +1,9 @@
+
+pre {
+    font-family: monospace;
+}
+
+span.wicked {
+    color: pink;
+    background-color: teal;
+}
