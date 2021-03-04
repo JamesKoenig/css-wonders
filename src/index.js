@@ -1,4 +1,10 @@
 import CodeSnippet from './code_snippet';
+import loadFiles from './load_files';
+
+const files = [
+  "hello_world.html",
+  "flex_direction.html",
+].map( path => `assets/code_snippets/${path}` );
 
 document.addEventListener('DOMContentLoaded', () => {
   let body = document.getElementsByTagName("body")[0];
@@ -7,12 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
   welcomeHeader.innerText = "dynamically generated html!";
   body.appendChild(welcomeHeader);
 
-  let xhr = new XMLHttpRequest();
-  xhr.open('GET', 'assets/code_snippets/hello_world.html', true);
-  xhr.onload = function () {
-    let snippet = new CodeSnippet(this.response);
+  const callback = response => {
+    let snippet = new CodeSnippet(response);
     body.appendChild(snippet.renderText());
     body.appendChild(snippet.render());
   }
-  xhr.send();
+
+  loadFiles(callback,files);
 });
