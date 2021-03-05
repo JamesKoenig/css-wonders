@@ -1,5 +1,5 @@
 
-const loadFiles = (callback, filePaths = []) => {
+const loadFiles = async (callback, filePaths = []) => {
   if (filePaths.length === 0 ) return undefined;
 
   const [first, ...rest] = filePaths;
