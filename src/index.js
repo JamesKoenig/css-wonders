@@ -28,6 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
   button.onclick = () => {
     body.appendChild(flexExampleButton("row"));
     body.appendChild(flexExampleButton("row-reverse"));
+    body.appendChild(flexExampleButton("column"));
+    body.appendChild(flexExampleButton("column-reverse"));
   };
   body.appendChild(button);
 });
