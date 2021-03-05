@@ -1,0 +1,25 @@
+:root {
+    --solarized-base-one: #93a1a1;
+    --solarized-base-two: #eee8d5;
+    --solarized-base-zero-three: #002b36;
+    --solarized-cyan: #2aa198;
+}
+
+code.code-raw {
+    font-family: monospace;
+    white-space: pre;
+    border-radius: 15px;
+    display: block;
+    padding: 3% 20%;
+    margin: 5%;
+    text-overflow: nowrap;
+    overflow: visible;
+    color: var(--solarized-base-one);
+    background-color: var(--solarized-base-zero-three);
+    height: fit-content;
+    wdith: fit-content;
+}
+
+code.code-raw span.wicked {
+    color: var(--solarized-cyan);
+}

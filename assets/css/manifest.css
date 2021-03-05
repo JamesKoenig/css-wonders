@@ -1,6 +1,8 @@
 
 @import "./reset.css";
 
+@import "./code_raw.css";
+
 @import "./highlight.css";
 
 @import "./flex_direction_example.css";
