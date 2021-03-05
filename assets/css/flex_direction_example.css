@@ -1,0 +1,29 @@
+div.flex-direction-example {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+div.flex-direction-example h3 {
+    text-align: center;
+}
+
+div.flex-direction-example > div {
+    padding: 20px;
+}
+
+div.flex-direction-example-first {
+    background-color: pink;
+}
+
+div.flex-direction-example-second {
+    background-color: lightblue;
+}
+
+div.flex-direction-example-third {
+    background-color: lightgreen;
+}
+
+div.flex-direction-example-fourth {
+    background-color: violet;
+}
