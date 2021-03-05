@@ -1,20 +1,27 @@
 
-export default (title,flexDirection) => {
+export default direction => {
   const flexDirectionExample =
     document.getElementsByClassName("flex-direction-example")[0];
   const { height, width } = 
     flexDirectionExample.parentElement.getBoundingClientRect();
 
   let button = document.createElement("button");
-  button.innerText = title;
+  button.innerText = direction;
 
   const transitionEnd = () => {
-    flexDirectionExample.style["flex-direction"] = flexDirection;
+    console.log({height, width, direction});
+    flexDirectionExample.style.flexDirection = direction;
     flexDirectionExample.style.height = `${height}px`;
     flexDirectionExample.style.width  = `${width}px`;
+    flexDirectionExample.removeEventListener(
+      "webkitTransitionEnd", transitionEnd);
+    flexDirectionExample.removeEventListener(
+      "transitionend", transitionEnd);
   }
 
   function onClick() {
+
+
     flexDirectionExample.style.height = "0";
     flexDirectionExample.style.width  = "0";
 

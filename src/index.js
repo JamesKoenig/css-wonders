@@ -25,9 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let button = document.createElement('button');
   button.innerText = "create other buttons";
-  button.onClick = () => {
-    body.appendChild(flexExampleButton("row","row"));
-    body.appendChild(flexExampleButton("row-reverse","row-reverse"));
+  button.onclick = () => {
+    body.appendChild(flexExampleButton("row"));
+    body.appendChild(flexExampleButton("row-reverse"));
   };
   body.appendChild(button);
 });
