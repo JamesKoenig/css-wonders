@@ -2,14 +2,26 @@ div.flex-direction-example {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    overflow: hidden;
+    width: 20px;
+    height: 20px;
+    transition: all 1s;
+    align-items: center;
+}
+
+div.flex-direction-example:hover {
+    height: 400px;
+    width: 800px;
+}
+
+div.flex-direction-example > div {
+    position: relative;
+    padding: 20px;
+    height: max-content;
 }
 
 div.flex-direction-example h3 {
     text-align: center;
-}
-
-div.flex-direction-example > div {
-    padding: 20px;
 }
 
 div.flex-direction-example-first {
