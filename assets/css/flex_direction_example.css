@@ -2,7 +2,6 @@ div.flex-direction-example {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    overflow: hidden;
     width: 20px;
     height: 20px;
     transition: all 1s;
@@ -14,28 +13,24 @@ div.flex-direction-example:hover {
     width: 800px;
 }
 
-div.flex-direction-example > div {
-    position: relative;
-    padding: 20px;
-    height: max-content;
-}
-
 div.flex-direction-example h3 {
+    position: absolute;
     text-align: center;
+    padding: 20px;
 }
 
-div.flex-direction-example-first {
+div.flex-direction-example-first h3 {
     background-color: pink;
 }
 
-div.flex-direction-example-second {
+div.flex-direction-example-second h3 {
     background-color: lightblue;
 }
 
-div.flex-direction-example-third {
+div.flex-direction-example-third h3 {
     background-color: lightgreen;
 }
 
-div.flex-direction-example-fourth {
+div.flex-direction-example-fourth h3 {
     background-color: violet;
 }
