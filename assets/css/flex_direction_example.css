@@ -9,7 +9,6 @@ div.flex-direction-example {
 }
 
 div.flex-direction-example:hover {
-    height: 400px;
     width: 800px;
 }
 

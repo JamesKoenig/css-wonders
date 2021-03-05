@@ -5,6 +5,6 @@
 
 @import "./code_raw.css";
 
-@import "./highlight.css";
+@import "./code_render.css";
 
 @import "./flex_direction_example.css";

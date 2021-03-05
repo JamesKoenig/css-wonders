@@ -1,0 +1,12 @@
+div.code-render {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1600px;
+    margin: auto;
+    border-radius: 12px;
+    background-color: var(--solarized-base-two);
+    height: 400px;
+    border: 2px solid var(--solarized-base-zero-zero);
+}
