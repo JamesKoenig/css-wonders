@@ -1,5 +1,6 @@
 import CodeSnippet from './code_snippet';
 import flexExampleButton from './flex_example_buttons';
+import flexExample from './flex_example';
 
 const files = [
   "hello_world.html",
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
       body.appendChild(snippet.render());
     },
     response => {
+      return;
       let snippet = new CodeSnippet(response);
       body.appendChild(snippet.renderText());
       body.appendChild(snippet.render());
@@ -45,4 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
     body.appendChild(flexExampleButton("column-reverse"));
   };
   body.appendChild(button);
+
+  flexExample(body);
 });
