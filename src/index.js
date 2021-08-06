@@ -2,51 +2,20 @@ import CodeSnippet from './code_snippet';
 import flexExampleButton from './flex_example_buttons';
 import flexExample from './flex_example';
 
-const files = [
-  "hello_world.html",
-  "flex_direction.html",
-].map( path => `assets/code_snippets/${path}` );
-
+const file = 'assets/code_snippets/flex_direction.html';
 
 document.addEventListener('DOMContentLoaded', () => {
-  let body = document.getElementsByTagName("body")[0];
+  let root = document.getElementById('root');
 
-  let welcomeHeader = document.createElement("h1")
-  welcomeHeader.innerText = "dynamically generated html!";
-  body.appendChild(welcomeHeader);
-  const callbacks = [
+  const callback =
     response => {
       let snippet = new CodeSnippet(response);
-      body.appendChild(snippet.renderText());
-      body.appendChild(snippet.render());
-    },
-    response => {
-      return;
-      let snippet = new CodeSnippet(response);
-      body.appendChild(snippet.renderText());
-      body.appendChild(snippet.render());
-      body.appendChild(flexExampleButton("row"));
-      body.appendChild(flexExampleButton("row-reverse"));
-      body.appendChild(flexExampleButton("column"));
-      body.appendChild(flexExampleButton("column-reverse"));
-    },
-  ]
+      //reference root dom element is enclosed in callback
+      root.appendChild(snippet.renderText());
+      root.appendChild(snippet.render());
+    }
 
-  files.map((filePath,idx) =>
-    fetch(filePath)
-      .then(x => x.text())
-      .then(response => callbacks[idx](response))
-  );
-
-  let button = document.createElement('button');
-  button.innerText = "create other buttons";
-  button.onclick = () => {
-    body.appendChild(flexExampleButton("row"));
-    body.appendChild(flexExampleButton("row-reverse"));
-    body.appendChild(flexExampleButton("column"));
-    body.appendChild(flexExampleButton("column-reverse"));
-  };
-  body.appendChild(button);
-
-  flexExample(body);
+  fetch(file)
+    .then( x => x.text() ) //convert to text
+    .then( response => callback(response) )
 });
